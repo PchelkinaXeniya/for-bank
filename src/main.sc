@@ -78,7 +78,7 @@ theme: /
         script:
             $jsapi.stopSession();
         
-    state: NoMatch || noContext = true
+    state: NoMatch
         event!: noMatch
         random:
             a: Не смог разобрать :( Попробуете сказать иначе?
