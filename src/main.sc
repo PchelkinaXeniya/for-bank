@@ -7,23 +7,9 @@ theme: /
         a: Добрый день! Я виртуальный помощник банка «Открытие»!<br/>Чем могу помочь?
 
 
-
-state: questions
-            a: У вас остались вопросы?
-            
-            state: yes
-                q: * $yes *
-                go!: /areYouReadyToOrderCard/questions/operator
-            state: no
-                q: * $no *
-                go!: /areYouReadyToOrderCard/questions/thanksForContacting
-            
-            state: operator
-                a: Соединяю с оператором
-
-            #ШАГ18     
+            #ШАГ    
             state: thanksForContacting
-                a: Благодарим за обращение в банк «Рога и Копыта»!
+                a: Благодарим за обращение в банк «Открытие»!
                 script:
                     $jsapi.stopSession();
             
