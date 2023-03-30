@@ -48,9 +48,7 @@ theme: /
                2. указать код из смс-код,<br/>
                3. придумать новый пароль для входа<br/>
             
-            
-            Приятно было пообщаться. Всегда готов помочь вам снова!
-        go!: /thanksForContacting
+    
 
     state: HowToChangeCardPassword
         q: * ($change * $password | $PIN * [$card]) *        
@@ -62,13 +60,16 @@ theme: /
            5. Повторите ее.<br/>
            И все готово!<br/>
            Пин-код установлен, можно пользоваться.<br/>
-           Приятно было пообщаться. Всегда готов помочь вам снова!
-        go!: /thanksForContacting
+        go!: /ThanksForContacting  
+        
     
-    state: thanksForContacting
-                a: Благодарим за обращение в банк «Открытие»!
-                script:
-                    $jsapi.stopSession();
+    state: ThanksForContacting       
+           Приятно было пообщаться. Всегда готов помочь вам снова!
+        go!: /TheEnd
+    
+    state: TheEnd
+        script:
+            $jsapi.stopSession();
         
     state: NoMatch || noContext = true
         event!: noMatch
