@@ -44,7 +44,7 @@ theme: /
             $response.replies.push({
                 "type": "timeout",
                 "interval": 10,
-                "targetState": "/AlternativeToChangeAppPassword"
+                "targetState": "/HowToChangeAppPassword/AlternativeToChangeAppPassword"
             });
         
         state: AlternativeToChangeAppPassword   
