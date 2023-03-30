@@ -21,19 +21,6 @@ theme: /
             q: * 2 *
             go!: /HowToChangeCardPassword
             
-    
-        
-    state: HowToChangeAppPassword
-        q: * ($change * $password | $PIN) *
-    
-    state: HowToChangeCardPassword
-        q: * ($change * $password | $PIN) *
-
-            #ШАГ    
-            state: thanksForContacting
-                a: Благодарим за обращение в банк «Открытие»!
-                script:
-                    $jsapi.stopSession();
             
     state: NoMatch || noContext = true
         event!: noMatch
