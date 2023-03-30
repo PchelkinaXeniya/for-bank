@@ -47,7 +47,7 @@ theme: /
         go!: /thanksForContacting
 
     state: HowToChangeCardPassword
-        q: * ($change * ($password | $PIN * $card)) *        
+        q: * ($change * $password | $PIN * [$card]) *        
         a: Это можно сделать в приложении:<br/>
            1. На экране "Мои деньги" в разделе "Карты" нажмите на нужную.<br/>
            2. Выберите вкладку "Настройки".<br/>
