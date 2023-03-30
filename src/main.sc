@@ -1,7 +1,8 @@
 require:requirements.sc
 
 theme: /
-        state: Start
+    
+    state: Start
         q!: $regex</start>
         a: Здравствуйте!
         script:
