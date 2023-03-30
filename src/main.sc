@@ -27,7 +27,7 @@ theme: /
     
     
     state: HowToChangeAppPassword
-        q: * ($change * ($password | $PIN * $app)) *
+        q: * ($change * $password | $PIN * [$app]) *
         a: Смена пароля от приложения возможна несколькими способами:<br/>
            1. на экране "Профиль" выберите "Изменить код входа в приложение".<br/>
            2. введите SMS-код.<br/>
