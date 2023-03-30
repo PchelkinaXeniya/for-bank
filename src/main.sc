@@ -54,7 +54,14 @@ theme: /
                1. ввести полный номер карты (если оформляли ранее, иначе номер телефона и дату рождения.<br/>
                2. указать код из смс-код,<br/>
                3. придумать новый пароль для входа<br/>
-            
+            script:
+                $response.replies = $response.replies || [];
+                $response.replies.push({
+                    "type": "timeout",
+                    "interval": 2,
+                    "targetState": "/ThanksForContacting"
+                });
+        
     
 
     state: HowToChangeCardPassword
