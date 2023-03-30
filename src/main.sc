@@ -11,6 +11,7 @@ theme: /
     state: HowToChangePassword
         q!: * ($change * ($password | $PIN)) *
         q!: * ($password | $PIN) *
+        q!: * (($password | $PIN) * $app * $card) *
         a:  Здравствуйте!<br/>
             Сейчас расскажу порядок действий.<br/>
             Выберите, что именно планируете сделать:<br/>
