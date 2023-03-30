@@ -24,8 +24,10 @@ theme: /
     
         
     state: HowToChangeAppPassword
+        q: * ($change * $password | $PIN) *
     
     state: HowToChangeCardPassword
+        q: * ($change * $password | $PIN) *
 
             #ШАГ    
             state: thanksForContacting
