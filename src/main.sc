@@ -80,7 +80,7 @@ theme: /
            3. Нажмите "Сменить пин-код".<br/>
            4. И введите комбинацию, удобную вам.<br/>
            5. Повторите ее.<br/>
-        go: /Done 
+        go!: /HowToChangeCardPassword/Done 
         
         state: Done       
             a: И все готово!<br/>
