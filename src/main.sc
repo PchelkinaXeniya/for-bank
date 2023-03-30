@@ -7,7 +7,7 @@ theme: /
         a: Добрый день! Я виртуальный помощник банка «Открытие»!<br/>Чем могу помочь?
 
     state: HowToChangePassword
-        q: * {$change * $password/$PIN * } *
+        q: * ($change * $password | $PIN) *
         a:  Сейчас расскажу порядок действий.<br/>
             Выберите, что именно планируете сделать:<br/>
             1. Поменять пароль для входа в приложение.<br/>
@@ -26,11 +26,6 @@ theme: /
     state: HowToChangeAppPassword
     
     state: HowToChangeCardPassword
-
-
-
-
-
 
             #ШАГ    
             state: thanksForContacting
