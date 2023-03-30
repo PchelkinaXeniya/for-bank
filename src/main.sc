@@ -2,12 +2,6 @@ require:requirements.sc
 
 theme: /
     
-    state: Start
-        q!: $regex</start>
-        a: Здравствуйте!
-        script:
-            $session = {}
-    
     state: HowToChangePassword
         q: * ($change * $password | $PIN) *
         a:  Здравствуйте!<br/>
