@@ -17,7 +17,15 @@ theme: /
             1. Поменять пароль для входа в приложение.<br/>
             2. Поменять PIN-код от карты.<br/>
             Пожалуйста, отправьте цифру, соответствующую вашему выбору.
+        script:
+            $response.replies = $response.replies || [];
+            $response.replies.push({
+                "type": "timeout",
+                "interval": 10,
+                "targetState": "/ThanksForContacting"
+            });
         
+            
 
 
         
