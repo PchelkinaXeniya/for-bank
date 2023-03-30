@@ -20,7 +20,12 @@ theme: /
         state: two
             q: * 2 *
             go!: /HowToChangeCardPassword
-            
+       
+    state: HowToChangeAppPassword
+        q: * ($change * ($password | $PIN * $app)) *
+    
+    state: HowToChangeCardPassword
+        q: * ($change * ($password | $PIN * $card)) *        
             
     state: NoMatch || noContext = true
         event!: noMatch
