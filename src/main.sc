@@ -9,7 +9,7 @@ theme: /
             $session = {}
             
     state: HowToChangePassword
-        q: * ($change * ($password | $PIN)) *
+        q!: * ($change * ($password | $PIN)) *
         a:  Здравствуйте!<br/>
             Сейчас расскажу порядок действий.<br/>
             Выберите, что именно планируете сделать:<br/>
