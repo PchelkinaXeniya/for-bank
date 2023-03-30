@@ -1,8 +1,12 @@
 require:requirements.sc
 
 theme: /
-
-
+        state: Start
+        q!: $regex</start>
+        a: Здравствуйте!
+        script:
+            $session = {}
+    
     state: HowToChangePassword
         q: * ($change * $password | $PIN) *
         a:  Здравствуйте!<br/>
@@ -11,7 +15,7 @@ theme: /
             1. Поменять пароль для входа в приложение.<br/>
             2. Поменять PIN-код от карты.<br/>
             Пожалуйста, отправьте цифру, соответствующую вашему выбору.
-
+        
 
 
         
@@ -39,7 +43,7 @@ theme: /
            2. указать код из смс-код,<br/>
            3. придумать новый пароль для входа<br/>
             Приятно было пообщаться. Всегда готов помочь вам снова!
-    
+        go!: /thanksForContacting
 
     state: HowToChangeCardPassword
         q: * ($change * ($password | $PIN * $card)) *        
@@ -52,7 +56,12 @@ theme: /
            И все готово!<br/>
            Пин-код установлен, можно пользоваться.<br/>
            Приятно было пообщаться. Всегда готов помочь вам снова!
-
+        go!: /thanksForContacting
+    
+    state: thanksForContacting
+                a: Благодарим за обращение в банк «Открытие»!
+                script:
+                    $jsapi.stopSession();
         
     state: NoMatch || noContext = true
         event!: noMatch
