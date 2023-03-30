@@ -9,7 +9,7 @@ theme: /
             $session = {}
             
     state: HowToChangePassword
-        q: * ($change * $password | $PIN) *
+        q: * ($change * ($password | $PIN)) *
         a:  Здравствуйте!<br/>
             Сейчас расскажу порядок действий.<br/>
             Выберите, что именно планируете сделать:<br/>
@@ -33,7 +33,7 @@ theme: /
             go!: /HowToChangeCardPassword
     
     state: HowToChangeAppPassword
-        q: * ($change * $password | $PIN * [$app]) *
+        q: * ($change * ($password | $PIN) * $app) *
         a: Смена пароля от приложения возможна несколькими способами:<br/>
            1. на экране "Профиль" выберите "Изменить код входа в приложение".<br/>
            2. введите SMS-код.<br/>
@@ -62,7 +62,7 @@ theme: /
                 });
         
     state: HowToChangeCardPassword
-        q: * ($change * $password | $PIN * [$card]) *        
+        q: * ($change * ($password | $PIN) * $card) *        
         a: Это можно сделать в приложении:<br/>
            1. На экране "Мои деньги" в разделе "Карты" нажмите на нужную.<br/>
            2. Выберите вкладку "Настройки".<br/>
