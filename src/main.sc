@@ -82,7 +82,7 @@ theme: /
            5. Повторите ее.<br/>
            И все готово!<br/>
            Пин-код установлен, можно пользоваться.<br/>
-        go!: /ThanksForContacting  
+         
         
     
     state: ThanksForContacting       
