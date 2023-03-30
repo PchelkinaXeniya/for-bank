@@ -8,7 +8,6 @@ theme: /
         script:
             $session = {}
             
-            
     state: HowToChangePassword
         q: * ($change * $password | $PIN) *
         a:  Здравствуйте!<br/>
@@ -21,25 +20,17 @@ theme: /
             $response.replies = $response.replies || [];
             $response.replies.push({
                 "type": "timeout",
-                "interval": 10,
-                "targetState": "/ThanksForContacting"
+                "interval": 60,
+                "targetState": "/TheEnd"
             });
         
-            
-
-
-        
-        state: one
+        state: ChangeAppPassword
             q: * 1 *
             go!: /HowToChangeAppPassword
             
-            
-            
-        state: two
+        state: ChangeCardPassword
             q: * 2 *
             go!: /HowToChangeCardPassword
-    
-    
     
     state: HowToChangeAppPassword
         q: * ($change * $password | $PIN * [$app]) *
@@ -70,8 +61,6 @@ theme: /
                     "targetState": "/ThanksForContacting"
                 });
         
-    
-
     state: HowToChangeCardPassword
         q: * ($change * $password | $PIN * [$card]) *        
         a: Это можно сделать в приложении:<br/>
