@@ -43,7 +43,7 @@ theme: /
             $response.replies = $response.replies || [];
             $response.replies.push({
                 "type": "timeout",
-                "interval": 10,
+                "interval": 2,
                 "targetState": "/HowToChangeAppPassword/AlternativeToChangeAppPassword"
             });
         
